@@ -4,9 +4,9 @@ const fs = require('fs');
 
 const app = express();
 
-// CORS for react app, assuming port 3000
+// CORS for react app, port 3001 is setup in .env file
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'http://localhost:3001',
   credentials: true
 }))
 
@@ -40,7 +40,7 @@ app.post('/order', (req, res) => {
 })
 
 if (require.main === module) {
-  app.listen(3030, () => console.log('Sundae server listening on port 3030!'))
+  app.listen(3031, () => console.log('Sundae server listening on port 3031!'))
 }
 
 module.exports = app;
