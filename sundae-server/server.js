@@ -4,9 +4,9 @@ const fs = require('fs');
 
 const app = express();
 
-// CORS for react app, port 3001 is setup in .env file
+// CORS for react app, port 3005 is setup in .env file
 app.use(cors({
-  origin: 'http://localhost:3001',
+  origin: 'http://localhost:3005',
   credentials: true
 }))
 
@@ -29,7 +29,7 @@ app.get('/toppings', (req, res) => {
 
 app.post('/order', (req, res) => {
   // create a random order number
-  const orderNumber = Math.floor(Math.random() * 10000000000);
+  const orderNumber = Math.floor(Math.random() * 1000);
 
   res
     // set status to 201 (created)
